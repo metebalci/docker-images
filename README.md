@@ -46,7 +46,7 @@ services:
         source: /mnt/containers/openldap/var/openldap-data
         target: /opt/openldap/var/openldap-data
       - type: bind
-        source: /etc/letsencrypt/live/mydomain
+        source: /etc/letsencrypt/archive/mydomain
         target: /tls
     deploy:
       replicas: 1
