@@ -26,11 +26,9 @@ Sample for compose:
 ```
 services:
   ldap:
-    image: openldap:2.5.17
+    image: metebalci/openldap:2.5.17
     hostname: ldap
-    user: root
-    build:
-      context: openldap-2.5.17
+    user: root    
     entrypoint:
       - /opt/openldap/libexec/slapd
       - -d
