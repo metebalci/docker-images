@@ -23,7 +23,7 @@ RUN tar zxvf openldap-2.5.17.tgz
 
 # configure, build, test and install
 WORKDIR /opt/openldap-2.5.17
-RUN ./configure --prefix=/opt/openldap --enable-slapd --enable-crypt --enable-memberof --with-cyrus
+RUN ./configure --prefix=/opt/openldap --enable-slapd --enable-crypt --enable-memberof --with-cyrus-sasl --with-tls=gnutls
 RUN make depend
 RUN make
 # make test takes time, no need to run this everytime during development
