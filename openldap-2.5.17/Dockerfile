@@ -36,4 +36,5 @@ EXPOSE 636
 
 WORKDIR /opt/openldap
 # without any -d, slapd forks
-ENTRYPOINT ["/opt/openldap/libexec/slapd", "-d", "-1", "-h", "ldap://0.0.0.0:389"]
+CMD ["-d", "-1", "-h", "ldap://0.0.0.0:389"]
+ENTRYPOINT ["/opt/openldap/libexec/slapd"]
