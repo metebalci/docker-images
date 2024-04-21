@@ -17,7 +17,7 @@ OpenLDAP 2.5.17 built from source on Ubuntu 22.04 with:
 - sasl, `--with-cyrus-sasl` (`libsasl2-dev`)
 - tls with gnutls, `--with-tls=gnutls` (`libgnutls28-dev`)
 
-Also a copy of [rfc2307.schema](https://github.com/metebalci/rfc2307.schema) and [rfc2307bis.schema](https://github.com/jtyr/rfc2307bis) is copied to `/opt/openldap/etc/openldap/schema/`.
+Also [rfc2307.schema](https://github.com/metebalci/rfc2307.schema) and [rfc2307bis.schema](https://github.com/jtyr/rfc2307bis) are copied to `/opt/openldap/etc/openldap/schema/`.
 
 To use, bind mount /opt/openldap/etc/openldap/slapd.conf to your slapd.conf, and mount TLS (e.g. /tls) and data directory (e.g. /opt/openldap/var/openldap-data) as defined in slapd.conf
 
