@@ -34,10 +34,6 @@ RUN make install
 EXPOSE 389
 EXPOSE 636
 
-# add extra schemas
-ADD rfc2307.schema /opt/openldap/etc/openldap/schema
-ADD rfc2307bis.schema /opt/openldap/etc/openldap/schema
-
 WORKDIR /opt/openldap
 # without any -d, slapd forks
 CMD ["-d", "-1", "-h", "ldap://0.0.0.0:389"]
